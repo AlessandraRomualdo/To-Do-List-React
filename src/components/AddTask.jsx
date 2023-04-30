@@ -9,6 +9,7 @@ export default class AddTask extends Component {
     this.state = {
       title: '',
       id: 0,
+      hasFinished: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -27,9 +28,11 @@ export default class AddTask extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const { onCreate } = this.props;
-    const { title, id } = this.state;
+    const { title, id, hasFinished } = this.state;
     if (id > 0) {
-      onCreate({ title, id });
+      // cria uma task se o id for maior que 0
+      onCreate({ title, id, hasFinished });
+      // restaura o estado anterio apos criar uma task
       this.setState({ title: '', id: 0 });
     }
   }
