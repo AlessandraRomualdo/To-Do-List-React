@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import AddTask from './components/AddTask';
 import Task from './components/Task';
+import './index.css';
+import Header from './components/Header';
 
 export default class App extends Component {
   constructor() {
@@ -73,8 +75,10 @@ export default class App extends Component {
     const { tasks } = this.state;
     return (
       <>
+        <Header />
         <AddTask onCreate={this.createTask} />
-        { tasks.map((task) => (
+        <h1 className="tarefas">Tarefas</h1>
+        { tasks.length === 0 ? (<h1 className="tarefas">Suas tarefas apareceram aqui ...</h1>) : tasks.map((task) => (
           <Task
             key={task.id}
             data={task}
