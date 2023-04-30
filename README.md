@@ -21,10 +21,11 @@ A aplicação web foi feita com React, utitlizando state, props e componentizaç
 ## Screenshots
 
 <div>
-<img src="./screenshts/exemplo.png" alt="pagina inicial" width=350>
-<img src="./screenshts/exemploo.png" alt="pagina com tarefas" width=350>
 <img src="./screenshts/mobile.png" alt="pagina inicial mobile" width=300 height=450>
 <img src="./screenshts/mobilee.png" alt="pagina inicial mobile com tarefas" width=300 height=450>
+<img src="./screenshts/exemplo.png" alt="pagina inicial" width=500>
+<img src="./screenshts/exemploo.png" alt="pagina com tarefas" width=500>
+
 
 
 </div>
