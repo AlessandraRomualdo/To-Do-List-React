@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import generators from '../lib/generators';
+import '../index.css';
 
 export default class AddTask extends Component {
   constructor() {
@@ -41,9 +42,13 @@ export default class AddTask extends Component {
     const { title } = this.state;
 
     return (
-      <form action="" onSubmit={this.handleSubmit}>
-        <input type="text" value={title} name="title" onChange={this.handleChange} />
-        <button type="submit">Adicionar Tarefa</button>
+      <form className="form-task" onSubmit={this.handleSubmit}>
+        <div className="container-form">
+          <input className=" placeholder:italic placeholder:text-slate-400 after:content-['*'] after:ml-0.5 after:text-red-500 " placeholder="Escreva uma tarefa" type="text" value={title} name="title" onChange={this.handleChange} />
+          <button className="rounded-full shadow-2xl bg-sky-500 hover:bg-sky-700 ..." type="submit">
+            Adicionar Tarefa
+          </button>
+        </div>
       </form>
     );
   }

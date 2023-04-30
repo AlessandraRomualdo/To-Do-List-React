@@ -1,6 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import '../index.css';
 
 export default class Task extends Component {
   constructor(props) {
@@ -26,13 +27,15 @@ export default class Task extends Component {
     const { data, onRemove, checked } = this.props;
     const { title, id } = data;
     return (
-      <div>
-        <label htmlFor="check">
-          <input type="checkbox" name="" id="check" checked={checked} onChange={this.handleCheckbox} />
-          Concluido
-        </label>
+      <div className="card-task">
         <h3>{title}</h3>
-        <button type="button" onClick={() => onRemove(id)}>Remover</button>
+        <div className="container-task">
+          <label htmlFor={checked}>
+            <input className="check" type="checkbox" name="" id="check" checked={checked} onChange={this.handleCheckbox} />
+            Concluido
+          </label>
+          <button className="shadow-2xl rounded-full bg-sky-500 hover:bg-sky-700 ..." type="button" onClick={() => onRemove(id)}>Remover</button>
+        </div>
       </div>
     );
   }
