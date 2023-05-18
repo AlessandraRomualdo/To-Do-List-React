@@ -21,6 +21,7 @@ A aplicação web foi feita com React, utitlizando state, props e componentizaç
 ## Screenshots
 
 <div>
+<img src="./screenshts/todo-list.gif" alt="pagina" width=900>
 <img src="./screenshts/mobile.png" alt="pagina inicial mobile" width=300 height=450>
 <img src="./screenshts/mobilee.png" alt="pagina inicial mobile com tarefas" width=300 height=450>
 <img src="./screenshts/exemplo.png" alt="pagina inicial" width=500>
